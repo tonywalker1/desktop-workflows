@@ -1,0 +1,27 @@
+# Example task: mail, plus two browser windows in different profiles.
+# Copy to ~/.config/dwf/tasks/comms.toml, adjust IDs, profiles and URLs, then run `dwf check comms` and `dwf sync`.
+version = 1
+name = "Comms"
+description = "Mail, messages and social media"
+icon = "mail-send"
+keywords = ["mail", "messages", "social"]
+mode = "parallel"
+
+[[steps]]
+id = "mail"
+app = "org.mozilla.thunderbird"
+
+# Firefox: `profile` is a profile name from profiles.ini (see about:profiles) or an absolute path; omit it for the
+# default profile.
+[[steps]]
+id = "messages"
+browser = "org.mozilla.firefox"
+urls = ["https://messages.google.com/web", "https://www.reddit.com"]
+
+# Chrome and other Chromium browsers: `profile` is the name shown in the profile menu, the account email, or the
+# profile directory ("Default", "Profile 1").
+[[steps]]
+id = "social"
+browser = "com.google.Chrome"
+profile = "Personal"
+urls = ["https://bsky.app", "https://www.linkedin.com/feed/"]

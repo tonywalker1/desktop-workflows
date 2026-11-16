@@ -3,6 +3,8 @@
 How `dwf` should start desktop apps and multi-tab browser windows, and why. Every claim below comes from the scripts
 in [spikes/launching/](../../spikes/launching/); they are canonical, and this document records what they showed and
 what it means for the design. Re-run them after browser or desktop upgrades and update this file when results change.
+The runner implements these recipes in [src/dwf/browsers.py](../../src/dwf/browsers.py) and
+[src/dwf/launch.py](../../src/dwf/launch.py).
 
 | Script | Establishes |
 |---|---|
